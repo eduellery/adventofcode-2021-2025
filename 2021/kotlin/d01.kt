@@ -5,7 +5,7 @@ fun String.intLines(): List<Int> {
 }
 
 fun main() {
-    val input = "01.in".intLines()
+    val input = "d01.in".intLines()
     val part1 = input.windowed(2).filter { (a, b) -> b > a }.count()
     val part2 = input.windowed(3).map { it.sum() }.windowed(2).filter { (a, b) -> b > a }.count()
     println("P1: " + part1)

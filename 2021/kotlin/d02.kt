@@ -5,7 +5,7 @@ fun String.intLines(): List<Pair<String, Int>> {
 }
 
 fun main() {
-    val input = "02.in".intLines()
+    val input = "d02.in".intLines()
     var depth1 = 0
     var depth2 = 0
     var horizontal = 0
