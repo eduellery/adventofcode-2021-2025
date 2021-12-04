@@ -19,7 +19,6 @@ fun main() {
                     winningBoards += board
                     if (winningBoards.size == 1) {
                         part1 = board.unmarkedNumbers().sum() * n
-                        winningBoards += board
                     } else if (winningBoards.size == boards.size) {
                         part2 = board.unmarkedNumbers().sum() * n
                         return@scope
