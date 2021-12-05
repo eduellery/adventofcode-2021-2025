@@ -28,8 +28,8 @@ fun main() {
         }
     }
 
-    println("Part 1: ${part1}")
-    println("Part 2: ${part2}")
+    println("P1: ${part1}")
+    println("P2: ${part2}")
 }
 
 class Board(private val grid: List<List<Int>>) {
