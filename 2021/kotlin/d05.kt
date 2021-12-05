@@ -33,7 +33,7 @@ private fun createMatrix(input: List<List<Int>>): Array<IntArray> {
 
 fun main() {
     val input = "d05.in".ints()
-    println("Part 1: ${countMatrix(input, createMatrix(input), false)}")
-    println("Part 2: ${countMatrix(input, createMatrix(input), true)}")
+    println("P1: ${countMatrix(input, createMatrix(input), false)}")
+    println("P2: ${countMatrix(input, createMatrix(input), true)}")
 }
 
