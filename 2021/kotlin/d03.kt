@@ -7,12 +7,13 @@ fun Int.binaryColumnValue(): Int = 2.0.pow(this.toDouble()).toInt()
 
 fun Int.maxBinaryValue(): Int = binaryColumnValue() - 1
 
-fun List<String>.bitwiseFilter(keepMostCommon: Boolean, width: Int): String = (0 until width).fold(this) { inputs, column ->
-    if (inputs.size == 1) inputs else {
-        val split = inputs.partition { it[column] == '1' }
-        if (keepMostCommon) split.longest() else split.shortest()
-    }
-}.first()
+fun List<String>.bitwiseFilter(keepMostCommon: Boolean, width: Int): String =
+    (0 until width).fold(this) { inputs, column ->
+        if (inputs.size == 1) inputs else {
+            val split = inputs.partition { it[column] == '1' }
+            if (keepMostCommon) split.longest() else split.shortest()
+        }
+    }.first()
 
 fun <T> Pair<List<T>, List<T>>.longest(): List<T> = if (first.size >= second.size) first else second
 
