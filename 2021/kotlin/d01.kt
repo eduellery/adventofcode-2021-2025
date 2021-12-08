@@ -1,6 +1,6 @@
 import java.io.File
 
-fun String.ints(): List<Int> = File(this).readLines().map { it.toInt() }
+private fun String.ints(): List<Int> = File(this).readLines().map { it.toInt() }
 
 fun main() {
     val input = "d01.in".ints()
