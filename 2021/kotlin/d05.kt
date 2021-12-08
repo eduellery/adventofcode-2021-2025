@@ -1,8 +1,7 @@
 import java.io.File
-import kotlin.collections.*
 import kotlin.math.sign
 
-fun String.ints(): List<List<Int>> = File(this).readLines().map {
+private fun String.ints(): List<List<Int>> = File(this).readLines().map {
     "(\\d+),(\\d+) -> (\\d+),(\\d+)".toRegex().matchEntire(it)!!.destructured.toList().map { it.toInt() }
 }
 
@@ -36,4 +35,3 @@ fun main() {
     println("P1: ${countMatrix(input, createMatrix(input), false)}")
     println("P2: ${countMatrix(input, createMatrix(input), true)}")
 }
-
