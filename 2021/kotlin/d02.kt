@@ -1,6 +1,6 @@
 import java.io.File
 
-fun String.pairs(): List<Pair<String, Int>> =
+private fun String.pairs(): List<Pair<String, Int>> =
     File(this).readLines().map { Pair(it.substringBefore(" "), it.substringAfter(" ").toInt()) }
 
 fun main() {
