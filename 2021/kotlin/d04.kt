@@ -1,6 +1,6 @@
 import java.io.File
 
-fun String.blocks(): List<String> = File(this).readText().split("\n\n")
+private fun String.blocks(): List<String> = File(this).readText().split("\n\n")
 
 fun main() {
     val input = "d04.in".blocks()
@@ -8,8 +8,7 @@ fun main() {
     val grids = input.drop(1)
     val boards = grids.map(Board::parse)
     val winningBoards = mutableSetOf<Board>()
-    var part1 = 0
-    var part2 = 0
+    var (part1, part2) = arrayOf(0, 0)
 
     run scope@{
         numbers.forEach { n ->
@@ -32,7 +31,7 @@ fun main() {
     println("P2: ${part2}")
 }
 
-class Board(private val grid: List<List<Int>>) {
+private class Board(private val grid: List<List<Int>>) {
 
     private val seen = mutableSetOf<Int>()
 
@@ -55,8 +54,7 @@ class Board(private val grid: List<List<Int>>) {
     }
 
     companion object {
-        fun parse(grid: String): Board {
-            return grid.trim().split("\n").map { it.trim().split("\\s+".toRegex()).map(String::toInt) }.let { Board(it) }
-        }
+        fun parse(grid: String): Board =
+            grid.trim().split("\n").map { it.trim().split("\\s+".toRegex()).map(String::toInt) }.let { Board(it) }
     }
 }
