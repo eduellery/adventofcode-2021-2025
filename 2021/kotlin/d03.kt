@@ -1,13 +1,13 @@
 import java.io.File
 import kotlin.math.pow
 
-fun String.lines(): List<String> = File(this).readLines()
+private fun String.lines(): List<String> = File(this).readLines()
 
-fun Int.binaryColumnValue(): Int = 2.0.pow(this.toDouble()).toInt()
+private fun Int.binaryColumnValue(): Int = 2.0.pow(this.toDouble()).toInt()
 
-fun Int.maxBinaryValue(): Int = binaryColumnValue() - 1
+private fun Int.maxBinaryValue(): Int = binaryColumnValue() - 1
 
-fun List<String>.bitwiseFilter(keepMostCommon: Boolean, width: Int): String =
+private fun List<String>.bitwiseFilter(keepMostCommon: Boolean, width: Int): String =
     (0 until width).fold(this) { inputs, column ->
         if (inputs.size == 1) inputs else {
             val split = inputs.partition { it[column] == '1' }
@@ -15,9 +15,9 @@ fun List<String>.bitwiseFilter(keepMostCommon: Boolean, width: Int): String =
         }
     }.first()
 
-fun <T> Pair<List<T>, List<T>>.longest(): List<T> = if (first.size >= second.size) first else second
+private fun <T> Pair<List<T>, List<T>>.longest(): List<T> = if (first.size >= second.size) first else second
 
-fun <T> Pair<List<T>, List<T>>.shortest(): List<T> = if (first.size < second.size) first else second
+private fun <T> Pair<List<T>, List<T>>.shortest(): List<T> = if (first.size < second.size) first else second
 
 fun main() {
     val input = "d03.in".lines()
