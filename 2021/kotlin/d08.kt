@@ -18,11 +18,11 @@ private fun countAll(entries: List<Entry>): Int = entries.sumOf { (patterns, out
     )
 
     with(mappedDigits) {
-        put(3, patterns.filter { it.size == 5 }.first { it.intersect(getValue(1)).size == 2 })
+        put(3, patterns.filter { it.size == 5 }.first { it.containsAll(getValue(1)) })
         put(2, patterns.filter { it.size == 5 }.first { it.intersect(getValue(4)).size == 2 })
         put(5, patterns.filter { it.size == 5 }.first { it !in values })
+        put(9, patterns.filter { it.size == 6 }.first { it.containsAll(getValue(4)) })
         put(6, patterns.filter { it.size == 6 }.first { it.intersect(getValue(1)).size == 1 })
-        put(9, patterns.filter { it.size == 6 }.first { it.intersect(getValue(4)).size == 4 })
         put(0, patterns.filter { it.size == 6 }.first { it !in values })
     }
 
