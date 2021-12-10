@@ -11,7 +11,9 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: 17
-      - uses: gradle/gradle-build-action@v2
-        with:
-          gradle-version: wrapper
-          arguments: build test
+      - name: gradle
+        run: ./gradlew clean install
+      # - uses: gradle/gradle-build-action@v2
+      #   with:
+      #     gradle-version: wrapper
+      #     arguments: build test
