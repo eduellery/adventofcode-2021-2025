@@ -29,7 +29,7 @@ class Day10(private val input: List<String>) {
     private fun List<CharArray>.incompleteScore(): Long =
         this.filterNot { it.any { char -> char in closing } }.map { it.reversed() }
             .map { remaining -> remaining.fold(0L) { acc, char -> acc * 5 + points[char]!! } }.sorted()
-            .let { it[it.size / 2] }
+            .let { it.midpoint() }
 
     fun solve1(): Long {
         return input.charArrays().corruptedScore()

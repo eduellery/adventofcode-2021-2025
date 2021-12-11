@@ -1,5 +1,3 @@
-typealias Entry = Pair<List<Set<Char>>, List<Set<Char>>>
-
 class Day08(private val input: List<String>) {
 
     private fun List<String>.entries(): List<Entry> = this.map { it.split(" | ") }.map { (patterns, output) ->

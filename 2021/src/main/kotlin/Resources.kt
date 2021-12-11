@@ -13,6 +13,6 @@ internal object Resources {
     fun resourceAsListOfInt(fileName: String, delimiter: String): List<Int> =
         resourceAsListOfString(fileName, delimiter).map { it.toInt() }
 
-    fun String.toURI(): URI = Resources.javaClass.classLoader.getResource(this)?.toURI()
+    private fun String.toURI(): URI = Resources.javaClass.classLoader.getResource(this)?.toURI()
         ?: throw IllegalArgumentException("Cannot find Resource: $this")
 }
