@@ -4,6 +4,10 @@ typealias Grid = List<List<Int>>
 
 typealias Entry = Pair<List<Set<Char>>, List<Set<Char>>>
 
+fun String.isUpperCase(): Boolean = this.all { it.isUpperCase() }
+
+fun String.isLowerCase(): Boolean = this.all { it.isLowerCase() }
+
 fun <T> List<T>.midpoint(): T = this[lastIndex / 2]
 
 fun Int.binaryColumnValue(): Int = 2.0.pow(this.toDouble()).toInt()
