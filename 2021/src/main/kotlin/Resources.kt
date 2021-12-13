@@ -3,6 +3,8 @@ import java.net.URI
 
 internal object Resources {
 
+    fun resourceAsString(fileName: String): String = File(fileName.toURI()).readText()
+
     fun resourceAsListOfString(fileName: String): List<String> = File(fileName.toURI()).readLines()
 
     fun resourceAsListOfString(fileName: String, delimiter: String): List<String> =

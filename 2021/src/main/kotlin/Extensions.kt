@@ -2,6 +2,10 @@ import kotlin.math.pow
 
 typealias Grid = List<List<Int>>
 
+typealias Dot = Pair<Int, Int>
+
+typealias DotAction = (Set<Dot>) -> Set<Dot>
+
 typealias Entry = Pair<List<Set<Char>>, List<Set<Char>>>
 
 fun String.isUpperCase(): Boolean = this.all { it.isUpperCase() }
