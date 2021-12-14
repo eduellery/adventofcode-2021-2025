@@ -1,6 +1,14 @@
 class Day13(val input: List<String>) {
 
-    private val instructions = parse(input)
+    private val dots = mutableSetOf<Dot>()
+
+    private val actions = mutableListOf<DotAction>()
+
+    init {
+        input[0].split("\n").map { it.split(",") }.map { dots.add(Dot(it[0].toInt(), it[1].toInt())) }
+        input[1].split("\n").map { it.split("=") }
+            .map { actions.add(if (it[0].last() == 'x') makeLeftAction(it[1].toInt()) else makeUpAction(it[1].toInt())) }
+    }
 
     private fun makeUpAction(y: Int) = makeAction { if (it.second <= y) it else Dot(it.first, 2 * y - it.second) }
 
@@ -27,28 +35,11 @@ class Day13(val input: List<String>) {
     }
 
     fun solve1(): Int {
-        val dots = instructions.first
-        val actions = instructions.second
         return actions.first()(dots).size
     }
 
     fun solve2(): String {
-        val dots = instructions.first
-        val actions = instructions.second
-        val result = actions.fold(dots) { acc, action ->
-            action(acc)
-        }
-        return display(result)
+        return display(actions.fold(dots) { acc, action -> action(acc) as MutableSet<Dot> })
     }
 
-    private fun parse(input: List<String>): Pair<Set<Dot>, List<DotAction>> {
-        val dots = mutableSetOf<Dot>()
-        input[0].split("\n").map { it.split(",") }.map { dots.add(Dot(it[0].toInt(), it[1].toInt())) }
-
-        val actions = mutableListOf<DotAction>()
-        input[1].split("\n").map { it.split("=") }
-            .map { actions.add(if (it[0].last() == 'x') makeLeftAction(it[1].toInt()) else makeUpAction(it[1].toInt())) }
-
-        return Pair(dots, actions)
-    }
 }
