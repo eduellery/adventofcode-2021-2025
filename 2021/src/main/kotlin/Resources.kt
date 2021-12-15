@@ -15,6 +15,9 @@ internal object Resources {
     fun resourceAsListOfInt(fileName: String, delimiter: String): List<Int> =
         resourceAsListOfString(fileName, delimiter).map { it.toInt() }
 
+    fun resourceAsGrid(fileName: String): Grid =
+        resourceAsListOfString(fileName).map { line -> line.map { it.digitToInt() } }
+
     private fun String.toURI(): URI = Resources.javaClass.classLoader.getResource(this)?.toURI()
         ?: throw IllegalArgumentException("Cannot find Resource: $this")
 }
