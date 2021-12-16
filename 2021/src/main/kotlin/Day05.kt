@@ -38,5 +38,4 @@ class Day05(private val input: List<String>) {
     fun solve2(): Int {
         return countMatrix(input.prepareInput(), createMatrix(input.prepareInput()), true)
     }
-
 }

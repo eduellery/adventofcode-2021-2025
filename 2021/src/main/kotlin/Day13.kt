@@ -41,5 +41,4 @@ class Day13(val input: List<String>) {
     fun solve2(): String {
         return display(actions.fold(dots) { acc, action -> action(acc) as MutableSet<Dot> })
     }
-
 }

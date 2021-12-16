@@ -44,5 +44,4 @@ class Day15(val input: Grid) {
     fun solve2(): Int {
         return cost(input.expand(5))
     }
-
 }

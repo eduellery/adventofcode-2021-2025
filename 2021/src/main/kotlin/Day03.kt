@@ -24,5 +24,4 @@ class Day03(private val input: List<String>) {
         val c02 = input.bitwiseFilter(false, width).toInt(2)
         return o2 * c02
     }
-
 }

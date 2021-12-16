@@ -12,7 +12,7 @@ class Day08(private val input: List<String>) {
             1 to patterns.first { it.size == 2 },
             4 to patterns.first { it.size == 4 },
             7 to patterns.first { it.size == 3 },
-            8 to patterns.first { it.size == 7 },
+            8 to patterns.first { it.size == 7 }
         )
 
         with(mappedDigits) {

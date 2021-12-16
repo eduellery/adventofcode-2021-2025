@@ -33,5 +33,4 @@ class Day14(val input: List<String>) {
     fun solve2(): Long {
         return transform(40)
     }
-
 }

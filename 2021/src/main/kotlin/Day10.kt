@@ -12,7 +12,7 @@ class Day10(private val input: List<String>) {
         '(' to 1L,
         '[' to 2L,
         '{' to 3L,
-        '<' to 4L,
+        '<' to 4L
     )
 
     private fun String.removePairs(): String = generateSequence(this) { prev ->

@@ -14,5 +14,4 @@ class Day07(private val input: List<Int>) {
     fun solve2(): Int {
         return minFuel(input) { x -> (x * (x + 1) / 2) }
     }
-
 }

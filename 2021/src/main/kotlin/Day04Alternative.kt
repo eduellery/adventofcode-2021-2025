@@ -10,7 +10,6 @@ class Day04Alternative(private val input: List<String>) {
     private fun Grid.isWinner(draws: Set<Int>) =
         this.any { row -> row.all { it in draws } } || (0..4).any { col -> this.all { row -> row[col] in draws } }
 
-
     private fun Grid.sumUnmarked(draws: Set<Int>): Int = this.sumOf { row ->
         row.filterNot { it in draws }.sum()
     }

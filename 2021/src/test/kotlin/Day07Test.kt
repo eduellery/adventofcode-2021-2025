@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class Day07Test {
 
     // Arrange
-    private val example = listOf(16,1,2,0,4,2,7,1,2,14)
+    private val example = listOf(16, 1, 2, 0, 4, 2, 7, 1, 2, 14)
     private val input = Resources.resourceAsListOfInt("day07.in", ",")
 
     @Nested

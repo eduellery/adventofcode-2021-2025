@@ -69,5 +69,4 @@ class Day16(val input: String) {
 
         private fun Boolean.toLong() = if (this) 1L else 0L
     }
-
 }
