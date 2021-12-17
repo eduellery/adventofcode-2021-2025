@@ -18,6 +18,8 @@ fun Int.binaryColumnValue(): Int = 2.0.pow(this.toDouble()).toInt()
 
 fun Int.maxBinaryValue(): Int = binaryColumnValue() - 1
 
+fun Int.sequenceSum(): Int = (1 + this) * this / 2
+
 fun <T> Pair<List<T>, List<T>>.longest(): List<T> = if (first.size >= second.size) first else second
 
 fun <T> Pair<List<T>, List<T>>.shortest(): List<T> = if (first.size < second.size) first else second
