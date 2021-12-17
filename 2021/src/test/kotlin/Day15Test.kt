@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class Day15Test {
 
     // Arrange
-    private val example = Resources.resourceAsGrid("day15.ex")
+    private val example = Resources.resourceAsGrid("day15.example")
     private val input = Resources.resourceAsGrid("day15.in")
 
     @Nested

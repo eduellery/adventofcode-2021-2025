@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test
 class Day05Test {
 
     // Arrange
-    private val example = Resources.resourceAsListOfString("day05.ex")
+    private val example = Resources.resourceAsListOfString("day05.example")
     private val input = Resources.resourceAsListOfString("day05.in")
 
     @Nested
