@@ -1,5 +1,7 @@
 import kotlin.math.pow
 
+typealias Transformation = Array<IntArray>
+
 typealias Grid = List<List<Int>>
 
 typealias Dot = Pair<Int, Int>
