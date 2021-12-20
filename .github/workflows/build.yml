@@ -12,7 +12,7 @@ jobs:
         with:
           java-version: 17
       - name: gradle
-        run: ./gradlew build --info
+        run: ./gradlew build
       # - uses: gradle/gradle-build-action@v2
       #   with:
       #     gradle-version: wrapper

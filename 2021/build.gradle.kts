@@ -38,5 +38,9 @@ tasks {
     }
     test {
         useJUnitPlatform()
+        failFast = true
+        testLogging {
+            events("PASSED", "SKIPPED", "FAILED")
+        }
     }
 }
