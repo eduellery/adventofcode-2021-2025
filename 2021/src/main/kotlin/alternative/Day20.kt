@@ -19,7 +19,7 @@ class Day20(val input: List<String>) {
                     (-1..1).flatMap { dy -> (-1..1).map { dx -> dy to dx } }
                         .map { (dy, dx) -> y + dy to x + dx }
                         .joinToString("") { (y, x) -> (image.getOrNull(y)?.getOrNull(x) ?: outside).toString() }
-                        .toInt(2).let{ algorithm[it] }
+                        .toInt(2).let { algorithm[it] }
                 }.toTypedArray()
             }.toTypedArray()
         }
