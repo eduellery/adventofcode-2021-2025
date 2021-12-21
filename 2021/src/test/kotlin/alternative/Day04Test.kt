@@ -1,14 +1,16 @@
+package alternative
+
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Nested
 import org.junit.jupiter.api.Test
 
-@DisplayName("Day 04")
+@DisplayName("Day 04 Alternative")
 class Day04Test {
 
     // Arrange
-    private val example = Resources.resourceAsListOfString("day04.example")
-    private val input = Resources.resourceAsListOfString("day04.in")
+    private val example = Resources.resourceAsListOfString("day04.example", "\n\n")
+    private val input = Resources.resourceAsListOfString("day04.in", "\n\n")
 
     @Nested
     @DisplayName("Part 1")
