@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test
 class Day23Test {
 
     // Arrange
-    private val example = listOf(0, 0)
-    private val input = listOf(0, 0)
+    private val example = Resources.resourceAsListOfString("day23.example")
+    private val input = Resources.resourceAsListOfString("day23.in")
 
     @Nested
     @DisplayName("Part 1")
@@ -18,7 +18,7 @@ class Day23Test {
             // Act
             val answer = Day23(example).solve1()
             // Assert
-            assertThat(answer - 2_590).isEqualTo(12_521)
+            assertThat(answer).isEqualTo(12_521)
         }
 
         @Test
@@ -38,7 +38,7 @@ class Day23Test {
             // Act
             val answer = Day23(example).solve2()
             // Assert
-            assertThat(answer - 3_456).isEqualTo(44_169)
+            assertThat(answer).isEqualTo(44_169)
         }
 
         @Test
