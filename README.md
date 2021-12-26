@@ -4,9 +4,15 @@ My answers for Advent of Code.[^1]
 
 ## [2021](https://adventofcode.com/2021)
 
-* Kotlin :star: x 30
+* Kotlin :star: x 50
 
-TODO: Re-implement PriorityQueue on Day15
+### TODO
+
+* Re-implement PriorityQueue
+* Change this repo to 2021 only
+* Give credit to
+  * https://github.com/ClouddJR
+  * https://todd.ginsberg.com/
 
 ## [2022](https://adventofcode.com/2022)
 
