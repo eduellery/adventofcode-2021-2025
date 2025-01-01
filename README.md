@@ -16,19 +16,19 @@ My answers for Advent of Code.[^1]
 
 ## [2022](https://adventofcode.com/2022)
 
-* Go? :star: x 0
+* Swift
 
 ## [2023](https://adventofcode.com/2023)
 
-* Rust? :star: x 0
+* TS
 
 ## [2024](https://adventofcode.com/2024)
 
-* Java 21 for 10th edition? :star: x 0
+* Go
 
 ## [2025](https://adventofcode.com/2025)
 
-* Something with my daughter to celebrate her 5 years (and 10 years of AoC?) :star: x 0
+* Something with my daughter to celebrate her 5 years (and 10 years of AoC?) :star: x 0 - Java 21?
 
 [^1]: **Disclaimer**: I do AoC for fun and to learn new languages. Part of my learning process (also for fun, even if I
 know the language already), is to check what other users do and learn a few tricks from it. I can't help but incorporate
